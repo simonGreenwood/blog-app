@@ -10,10 +10,7 @@ import BlogList from "./components/BlogList";
 import BlogForm from "./components/BlogForm";
 import LoginForm from "./components/LoginForm";
 
-import blogService from "./services/blogService";
-
 const App = () => {
-  const [blogs, setBlogs] = useState(null);
 
   return (
     <div className="App">

@@ -6,6 +6,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to="/" style={navItemStyle}>Blog App</Link>
+      <Link to="/create" style={navItemStyle}>Create Blog</Link>
+      <Link to="/login" style={navItemStyle}>Login</Link>
     </div>
   );
 }

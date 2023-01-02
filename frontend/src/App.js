@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
+import { 
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
-import Blog from "./components/Blog";
+import Navbar from "./components/Navbar";
+import BlogList from "./components/BlogList";
 import BlogForm from "./components/BlogForm";
 import LoginForm from "./components/LoginForm";
 
@@ -9,31 +15,16 @@ import blogService from "./services/blogService";
 const App = () => {
   const [blogs, setBlogs] = useState(null);
 
-
-  const submit = (event, title, content) => {
-    event.preventDefault();
-    console.log("submit");
-    setBlogs(blogs.concat({ title: "Test Blog", content: "http://test.com" }))
-  };
-
-  useEffect(() => {
-    blogService.getAll().then((blogs) => {
-      setBlogs(blogs);
-    });
-  }, []);
-
   return (
     <div className="App">
-      {"placeholder" === null ? <LoginForm /> : <BlogForm submit={submit}/>}
-      {blogs === null ? (
-        <div>Loading...</div>
-      ) : (
-        <div>
-          {blogs.map((blog) => (
-            <Blog key={blog.id} blog={blog}  />
-          ))}
-        </div>
-      )}
+      <Router>
+        <Navbar />     
+        <Routes> 
+          <Route path="/create" element={<BlogForm />} />
+          <Route path="/login" element={<LoginForm /> } />
+          <Route path="/" element={<BlogList />} exact/>
+         </Routes> 
+      </Router>
     </div>
   );
 };

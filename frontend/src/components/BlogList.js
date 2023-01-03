@@ -1,14 +1,10 @@
-import { useEffect, useState } from 'react';
-
+import { useSelector } from 'react-redux';
 import blogService from '../services/blogService';
 
 import Blog from './Blog';
 
 const BlogList = () => {
-  const [blogs, setBlogs] = useState(null);
-  useEffect(() => {
-    blogService.getAll().then(blogs => setBlogs(blogs))
-  }, [])
+  const blogs = useSelector(state => state.blogs);
   return blogs ? (
     <div>
       <h2>Blogs</h2>

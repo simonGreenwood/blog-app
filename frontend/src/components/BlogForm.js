@@ -1,11 +1,17 @@
 import { useState } from "react";
-const BlogForm = ({ submit }) => {
-  
+import { createNew } from "../reducers/blogReducer";
+import { useDispatch } from "react-redux";
+const BlogForm = () => {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState("test");
   const [content, setContent] = useState("test");
-
+  const submit = (event) => {
+    event.preventDefault();
+    console.log("submitting", title, content);
+    dispatch(createNew({title, content}))
+  }
   return (
-    <div onSubmit={submit}>
+    <div onSubmit={(e) => submit(e)} >
       <h2>Create a new blog</h2>
       <form>
         <div>title <input type="text" value={title} onChange={e => setTitle(e.target.value)}  id="title-input"/></div>

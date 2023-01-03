@@ -1,40 +1,32 @@
 {
-  "blogs": [ 
+  "blogs": [
     {
       "title": "Blog 1",
       "content": "This is the content of blog 1",
-      "author": "Simon Greenwood",
-      "date": "May 1, 2021",
+      "author": "SR Greenwood",
+      "date": "2023-01-03T17:30:59.014Z",
       "id": 1
     },
     {
       "title": "Blog 2",
       "content": "This is the content of blog 2",
-      "author": "S Greenwood",
-      "date": "May 2, 2021",
+      "author": "Simon Greenwood",
+      "date": "2023-01-03T17:31:11.307Z",
       "id": 2
     },
     {
       "title": "Blog 3",
       "content": "This is the content of blog 3",
-      "author": "Simon G",
-      "date": "May 3, 2021",
+      "author": "Simon Robert Greenwood",
+      "date": "2023-01-03T17:31:54.239Z",
       "id": 3
     },
     {
       "title": "Blog 4",
       "content": "This is the content of blog 4",
-      "author": "Simon R Greenwood",
-      "date": "May 4, 2021",
+      "author": "Simon R G",
+      "date": "2023-01-03T17:31:55.303Z",
       "id": 4
-
-    },
-    {
-      "title": "Blog 5",
-      "content": "This is the content of blog 5",
-      "author": "Simon Robert Greenwood",
-      "date": "May 5, 2021",
-      "id": 5
     }
   ]
 }

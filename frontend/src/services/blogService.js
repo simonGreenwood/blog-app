@@ -5,6 +5,7 @@ const getAll = async () => {
   return response.data
 }
 const createNew = async (newObject) => {
+  console.log("Creating new!")
   const response = await axios.post(baseUrl, newObject);
   return response.data
 }

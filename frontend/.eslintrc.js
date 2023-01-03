@@ -20,6 +20,7 @@ module.exports = { //eslint-disable-line
     "rules": {
         "react/react-in-jsx-scope": "off",
         "no-unused-vars": "warn",
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "no-undef": "warn"
     }
 }

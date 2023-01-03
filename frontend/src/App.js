@@ -11,7 +11,6 @@ import BlogForm from "./components/BlogForm";
 import LoginForm from "./components/LoginForm";
 
 const App = () => {
-
   return (
     <div className="App">
       <Router>
